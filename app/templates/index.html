@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Community Events Board</title>
+    </head>
+    <body>
+      <h1>Community Events Board</h1>
+      <div class="event-list">
+        <ol>
+          {% for event in events %}
+            <li>{{ event.name }} - {{ event.date }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+      <a href = "/input"><h3>Add your own event here!</h3></a>
+      <form method = "post" action = "/index">
+        <input type = "submit", value = "clear all data", name = "clear_all">
+      </form>
+    </body>
+</html>
